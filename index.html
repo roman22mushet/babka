@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HomeWork</title>
+    <style>
+        div {
+            background-color: lightblue;
+            padding: 100px;
+            text-align: center;
+            color: blue;
+
+        }
+        button{
+      padding: 15px;
+      margin-left:200px;
+      margin-right:200px;
+      margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        Мушет Роман Олегович
+    </div>
+<div id="1"> </div>
+<button id="2">Любимое блюдо</button>
+<button id="3">Любимый алкогольный напиток</button>
+<button id="4">Любимый безалкогольный напиток</button>
+
+<script>
+  let answer = document.getElementById('1');
+  let food = document.getElementById('2');
+  let alcohol = document.getElementById('3');
+  let nonalcohol = document.getElementById('4');
+
+  food.addEventListener('click', function (){
+    answer.innerText = 'Банан'
+  })
+  alcohol.addEventListener('click', function (){
+    answer.innerText = 'Мохито'
+  })
+  nonalcohol.addEventListener('click', function (){
+    answer.innerText = 'Сок'
+  })
+
+
+
+    </script>
+</body>
+</html>
