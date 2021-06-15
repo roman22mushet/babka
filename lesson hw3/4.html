@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+</head>
+<body>
+    <h2>Please enter the dolars to calculate its in hrivna</h2>
+
+    <input type="number" id="dollar" />
+    <button id="calculate">Calculate result</button> 
+    <h3 id="result">Result = </h3> 
+
+    <script>
+        let calculateBtn = document.getElementById('calculate');
+        let resultField = document.getElementById('result'); 
+        
+        
+
+        const arithmeticMean =  function() {
+            const dollar = parseInt(document.getElementById('dollar').value);
+            const kurs = 27.15;
+            const average =  kurs * dollar;
+            
+            resultField.innerText= 'Result=' + '' + average;
+        }
+
+        calculateBtn.onclick = function (){
+            arithmeticMean ()
+        }
+    </script>
+
+
+</body>
+</html>

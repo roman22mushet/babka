@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Please enter 2 numbers to calculate the arithmetic mean</h3>
+
+
+    <p><input type="number" id="x"/></p>
+    <p><input type="number" id="y"/></p>
+    <button id="calculate">Calculate result</button>
+    <h3 id="result">Result = </h3>
+<script>
+    const calculateBtn = document.getElementById('calculate');
+    const resultField = document.getElementById('result');
+
+    const arithmeticMean = function () {
+        const firstNumber = parseInt(document.getElementById('x').value);
+        const secondNumber = parseInt(document.getElementById('y').value);
+        const average = (firstNumber + secondNumber) / 2;
+
+        resultField.innerText = 'Result =' + ' ' + average;
+    }
+
+    calculateBtn.onclick = function () {
+        arithmeticMean()
+    }
+
+</script>
+
+</body>
+</html>

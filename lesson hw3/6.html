@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6</title>
+</head>
+<body>
+ <h2>Please enter denominations of bills and their quantity</h2>
+<p><input type="number" id="nominal1"/> <input type="number" id="count1"/> </p>
+<p><input type="number" id="nominal2"/> <input type="number" id="count2"/></p>
+<p><input type="number" id="nominal3"/> <input type="number" id="count3"/></p>
+<button id="calculate">Calculate result</button> 
+<h3 id="result">Result = </h3>   
+
+<script>
+    const calculateBtn = document.getElementById('calculate'); 
+    const resultField = document.getElementById('result'); 
+
+    const arithmeticMean =  function() {
+            const nominal1 = parseInt(document.getElementById('nominal1').value);
+            const count1 = parseInt(document.getElementById('count1').value);
+            const nominal2 = parseInt(document.getElementById('nominal2').value);
+            const count2 = parseInt(document.getElementById('count2').value);
+            const nominal3 = parseInt(document.getElementById('nominal3').value);
+            const count3 = parseInt(document.getElementById('count3').value);
+            
+            const average =  (nominal1 * count1) + (nominal2 * count2) + (nominal3 * count3);
+            
+            resultField.innerText= 'Result=' + '' + average ;
+        }
+
+        calculateBtn.onclick = function (){
+            arithmeticMean ()
+        }
+
+
+</script>
+
+
+
+
+
+    
+</body>
+</html>
