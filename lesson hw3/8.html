@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8</title>
+</head>
+<body>
+    <p><input type="number" id="firstNumber"/></p>
+    <button id="calculate">Calculate result</button>
+    <h3 id="result">Result = </h3>
+
+<script>
+        const calculateBtn = document.getElementById('calculate'); 
+        const resultField = document.getElementById('result');
+
+        let bullyingNumber = document.getElementById('calculate');
+        bullyingNumber.addEventListener('click', function (){
+            let number =  parseInt(document.getElementById('firstNumber').value);
+            let unit = number - parseInt(number / 10) * 10
+            let tenner = number - parseInt(number / 100) * 100 - unit
+            let hundred = number -  parseInt(number / 1000) * 1000 - tenner - unit
+            let thousand = number - hundred - tenner - unit
+
+            resultField.innerText=`sum of first and third digit = ` + (thousand / 1000 + tenner / 10) + `  and difference between the second and fourth digits = ` + (hundred / 100 - unit)
+        })
+
+
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>9</title>
+</head>
+<body>
+    <h2>Enter three-digit number</h2>
+    <p><input type="number" id="fnumber"/> </p>
+
+    <button id="calculate">Calculate result</button> 
+    <h3 id="result">Result = </h3>
+
+    <script>
+
+        const calculateBtn = document.getElementById('calculate'); 
+        const resultField = document.getElementById('result');
+        
+            let removeDigit = document.getElementById('calculate');
+            removeDigit.addEventListener('click', function (){
+            let number = parseInt(document.getElementById('fnumber').value)
+            let unit = number - parseInt(number / 10) * 10
+            let tenner = number - parseInt(number / 100) * 100 - unit
+            let hundred = number -  parseInt(number / 1000) * 1000 - tenner - unit
+            
+            resultField.innerText="new number = " + (hundred / 10 + unit)
+        })    
+    </script>
+    
+</body>
+</html>
